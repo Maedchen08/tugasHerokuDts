@@ -12,6 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-go@v2
       - run: go version
+      - run: ./golangci-lint --verbose run -D errcheck # proses linting kode golang
       - uses: akhileshns/heroku-deploy@v3.12.12 # Deploy ke heroku
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
