@@ -13,7 +13,6 @@ jobs:
       - uses: actions/setup-go@v2
       - run: go version
       - run: ls
-      - run: ./golangci-lint --verbose run -D errcheck 
       - uses: akhileshns/heroku-deploy@v3.12.12 
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
