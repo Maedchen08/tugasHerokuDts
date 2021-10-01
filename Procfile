@@ -1,1 +1,1 @@
-web: ./bin/tugasServerDeployment
+web: ./bin/tugasServerDeployment 
