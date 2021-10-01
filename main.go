@@ -10,7 +10,7 @@ func main() {
 	app.Get("/:userid/detail", GetByUserId)
 	app.Get("/follower/:username", GetByUsername)
 	app.Listen(":"+ os.Getenv("PORT"))
-	// app.Listen(":8989")
+	// app.Listen(":8989")....tugasssssssssssssssssssssssssssssssss
 
 }
 
