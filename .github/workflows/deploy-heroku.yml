@@ -10,11 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-go@v2
-      - run: go version
       - run: ls
       - run: go get -u golang.org/x/lint/golint
-      - run: golint main.go
+      - run: golint .
       - uses: akhileshns/heroku-deploy@v3.12.12 
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
