@@ -12,7 +12,6 @@ jobs:
       - uses: actions/checkout@v2
       - run: ls
       - run: go get -u golang.org/x/lint/golint
-      - run: ./golangci-lint --verbose run
       # - run: golint .
       - uses: akhileshns/heroku-deploy@v3.12.12 
         with:
