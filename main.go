@@ -1,12 +1,16 @@
 package main
 
 import (
-	"github.com/gofiber/fiber/v2"
 	"os"
+
+	"github.com/gofiber/fiber/v2"
 )
 
 func main() {
 	app := fiber.New()
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.SendString("Hello, World 👋!")
+	})
 	app.Get("/:userid/detail", GetByUserId)
 	app.Get("/follower/:username", GetByUsername)
 	app.Listen(":" + os.Getenv("PORT"))
